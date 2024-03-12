@@ -1,0 +1,2 @@
+Templates que foram utilizados para o Projeto de Aptidão Profissional, tanto
+para o site para o utilizador normal como para o administrador.
