@@ -1,13 +1,6 @@
 <?php //include("verificar.php")?>
 <?php
 @session_start();
-/*if(!isset($_SESSION["Tipo"])){
-    header('Location: https://vianaconnect.alunos.esmonserrate.org/login.php');
-}else{
-    if($_SESSION["Tipo"]!=1){
-        header('Location: https://vianaconnect.alunos.esmonserrate.org/admin/erro.php');
-    }
-}*/
 
 if(isset($_SESSION["CodigoAtleta"])){
     $codigoatleta=$_SESSION["CodigoAtleta"];
@@ -31,7 +24,7 @@ use classes\db\TableBD;
 $table= new TableBD();
 
 //Set the path for the html template
-$table->setTemplate( "tabelaperfil.php");
+$table->setTemplate("tabelaperfil.php");
 
 //Set title of the list
 $table->setTitle("Perfil");
