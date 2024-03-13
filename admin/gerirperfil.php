@@ -34,9 +34,9 @@ $table->setTitle("Perfil");
 $table->prepareTable("Atletas");
 $table->setAutentication("e");
 //list of fields for list, new, edit and import records
-$table->setFieldsAtive("Nome, Email, FotoPerfil, Descricao, CodigoDesporto, Privado, Feature",'list');
+$table->setFieldsAtive("CodigoAtleta, Nome, Email, FotoPerfil, Descricao, CodigoDesporto, Privado, Feature",'list');
 //$table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, CodigoDesporto, Clube, CodigoCategoria, Tipo, Privado, Feature", 'new');
-$table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, CodigoDesporto, Clube, CodigoCategoria, Tipo, Privado, Feature", 'edit');
+$table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, CodigoDesporto, Clube, CodigoCategoria, Privado, Feature", 'edit');
 //$table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, CodigoDesporto, Clube, CodigoCategoria, Tipo, Privado, Feature", 'csv');
 
 //define field name passw as a password, hidding the file 
@@ -44,7 +44,8 @@ $table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, Codigo
 
 //define lists of values to supplay to a field
 $table->setFieldList("CodigoCategoria",1,"SELECT `CodigoCategoria`, `Categoria` FROM `Categoria` ORDER BY Categoria",1);
-$table->setFieldList("Tipo",2,"1=>Admin,100=>Atleta",1);
+$table->setFieldList("CodigoDesporto",1,"SELECT `CodigoDesporto`, `Nome`, `Descrição`, `Foto` FROM `Desportos` ORDER BY Nome",1);
+//$table->setFieldList("Tipo",2,"1=>Admin,100=>Atleta",1);
 
 //the fiekd to be present as an image
 //$table->setImageField("photo","../fotos/thumbs/",30);

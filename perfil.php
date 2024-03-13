@@ -40,7 +40,7 @@ if(!isset($_SESSION["CodigoAtleta"])){
 				<hr class="sidebar-divider my-0">
 				<!-- Nav Item - Dashboard -->
 				<li class="nav-item">
-					<a class="nav-link" href="editperfil.php">
+					<a class="nav-link" href="admin/gerirperfil.php">
 					<i class="fas fa-fw fa-user-edit"></i>
 						<span>Editar perfil</span>
 					</a>
