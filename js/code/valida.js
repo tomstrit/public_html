@@ -32,17 +32,17 @@ const verificaAutentica = async () => {
 const renderAutentica = async () => {
 
   //console.log("ver");
-  const response = await fetch(c.url +`public/autenticacao/getAutentication`)
-  const lv = await response.json()
-  for (const v of lv) {
+  const response = await fetch(c.url +`admin/autenticacao.php`)
+  const v = await response.json()
+  //for (const v of lv) {
     if (v.user!== null){
-       document.getElementById("photo").setAttribute("src", v.foto)
-       document.getElementById("name").innerHTML =v.nome
+       document.getElementById("FotoPerfil").setAttribute("src", v.FotoPerfil)
+       document.getElementById("Nome").innerHTML =v.Nome
     }else{
       window.location.href = "error";
     }
     
-  }
+  //}
  
 }
 

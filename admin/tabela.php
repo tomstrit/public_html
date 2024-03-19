@@ -90,6 +90,7 @@
         			<div id="collapsePagesSite" class="collapse" aria-labelledby="headingPagesSite" data-parent="#accordionSidebar">
             			<div class="bg-white py-2 collapse-inner rounded">
                 			<a class="collapse-item" href="gerirdesportos.php">Gerir desportos</a>
+							<a class="collapse-item" href="geriratletasvianenses.php">Gerir atletas vianenses</a>
                 			<a class="collapse-item" href="gerirfotos.php">Gerir fotos</a>
 							<a class="collapse-item" href="/index.php">Ir para o site</a>
             			</div>
@@ -160,9 +161,8 @@
 					        <li class="nav-item dropdown no-arrow">
 					            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
 					                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?=$_SESSION["Nome"]?></span>
-					                <img class="img-profile rounded-circle"
-					                    src="<?=$_SESSION["FotoPerfil"]?>">
+					                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="Nome">...</span>
+					                <img class="img-profile rounded-circle" id="FotoPerfil" src="...">
 					            </a>
 					        </li>
 					    </ul>
@@ -406,12 +406,18 @@
 		<script src="tabelas/assets/js/pdfmake.min.js"></script>
 		<script src="tabelas/assets/js/vfs_fonts.js"></script>
 		<script src="tabelas/assets/js/custom.js"></script>
+		<script src="/js/code/config.js"></script>
+		<script src="/js/code/valida.js"></script>
+
 		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 		<script id="textAreaS">
 			//caixa de mensagens
 			$(document).ready(function() {
 				$('#textAreaN').summernote();
 			});
+		</script>
+		<script>
+			renderAutentica()
 		</script>
     </body>
 </html>

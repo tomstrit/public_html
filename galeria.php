@@ -25,6 +25,10 @@ include("ligacao.php");
             </div>
         </header>
         <!-- Fotos-->
+        <br>
+        <center><h1 class="mx-auto my-0 text-uppercase">Ainda em fase de desenvolvimento</h1></center>
+        <br>
+
         <div class="galeria">
             <?php
                 $sql = "SELECT `CodigoFoto`, `Nome`, `Ficheiro`, `CodigoProva` FROM `Fotos`";

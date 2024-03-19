@@ -50,16 +50,16 @@ if(!isset($_SESSION["CodigoAtleta"])){
 				<!-- Nav Item - Pages Collapse Menu -->
 				<li class="nav-item">
 					<a class="nav-link" href="logout.php">
-						<i class="fas fa-fw fa-leave"></i>
+						<i class="fa fa-ban"></i>
 						<span>Log Out</span>
 					</a>
 				</li>
 				<!-- Divider -->
 				<hr class="sidebar-divider">
 				<li class="nav-item ">
-					<a class="nav-link" href="index.php">
-						<i class="fas fa-fw fa-tachometer-alt"></i>
-						<span>Outra coisa</span>
+					<a class="nav-link" href="admin/erro.php">
+						<i class="fa fa-ban"></i>
+						<span>Não carregar</span>
 					</a>
 				</li>
 				<!-- Divider -->
