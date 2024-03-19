@@ -45,16 +45,19 @@ $table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, Codigo
 
 //define lists of values to supplay to a field
 $table->setFieldList("CodigoCategoria",1,"SELECT `CodigoCategoria`, `Categoria` FROM `Categoria` ORDER BY Categoria",1);
+$table->setFieldList("CodigoDesporto",1,"SELECT `CodigoDesporto`, `Nome`, `Descrição`, `Foto` FROM `Desportos` ORDER BY Nome",1);
 $table->setFieldList("Tipo",2,"1=>Admin,100=>Atleta",1);
+$table->setFieldList("Privado",2,"1=>Público,2=>Privado",1);
 
 //the fiekd to be present as an image
-//$table->setImageField("photo","../fotos/thumbs/",30);
+$table->setImageField("FotoPerfil","",50);
 
 //Link each record on the listo to external page passing the key value
 //$table->setLinkPage("/public/perfil.php");
 
 //Labels for fields
 $table->setLabel('CodigoDesporto',"desporto");
+$table->setLabel('Privado',"Privacidade");
 //$table->setLabel('name',"Full Name");
 //$table->setLabel('passw',"Password");
 

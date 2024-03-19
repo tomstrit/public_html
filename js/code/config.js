@@ -22,6 +22,6 @@
     
     
     get url() {
-      return  window.location.protocol + "//" + window.location.host + "/2do/";
+      return  window.location.protocol + "//" + window.location.host + "/";
     }
   }

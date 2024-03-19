@@ -65,6 +65,7 @@
         <div id="collapsePagesSite" class="collapse" aria-labelledby="headingPagesSite" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="gerirdesportos.php">Gerir desportos</a>
+                <a class="collapse-item" href="geriratletasvianenses.php">Gerir atletas vianenses</a>
                 <a class="collapse-item" href="gerirfotos.php">Gerir fotos</a>
                 <a class="collapse-item" href="/index.php">Ir para o site</a>
             </div>

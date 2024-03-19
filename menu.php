@@ -15,10 +15,10 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownProvas">
                         <a class="dropdown-item" href="../calendario.php">Calendário</a>
-                        <a class="dropdown-item" href="../LoRa.php">Localização</a>
+                        <a class="dropdown-item" href="../galeria.php">Galeria</a>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="../galeria.php">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link" href="../LoRa.php">LoRa</a></li>
                 <li class="nav-item"><a class="nav-link" href="../index.php#contactos">Contactos</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLogin" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,8 +31,6 @@
                             <a class="dropdown-item" href="perfil.php">Perfil</a>
                             <a class="dropdown-item" href="logout.php">Log out</a>
                         <?php
-                        //echo $_SESSION["Tipo"];
-                        //print_r($_SESSION);
                             if($_SESSION["Tipo"]==1){
                                 ?>
                                 <a class="dropdown-item" href="/admin">Admin</a>

@@ -27,16 +27,16 @@ $table= new TableBD();
 $table->setTemplate("tabelaperfil.php");
 
 //Set title of the list
-$table->setTitle("Perfil");
+$table->setTitle("Editar perfil:");
 
 //select the table in the datebase
 //SELECT `CodigoAtleta`, `Nome`, `Email`, `PalavraPasse`, `FotoPerfil`, `Descricao`, `CodigoDesporto`, `Clube`, `CodigoCategoria`, `Tipo`, `Privado`, `Feature` FROM `Atletas`
 $table->prepareTable("Atletas");
 $table->setAutentication("e");
 //list of fields for list, new, edit and import records
-$table->setFieldsAtive("Nome, Email, FotoPerfil, Descricao, CodigoDesporto, Privado, Feature",'list');
+$table->setFieldsAtive("CodigoAtleta, Nome, Email, FotoPerfil, Descricao, CodigoDesporto, Privado",'list');
 //$table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, CodigoDesporto, Clube, CodigoCategoria, Tipo, Privado, Feature", 'new');
-$table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, CodigoDesporto, Clube, CodigoCategoria, Tipo, Privado, Feature", 'edit');
+$table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, CodigoDesporto, Clube, CodigoCategoria, Privado", 'edit');
 //$table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, CodigoDesporto, Clube, CodigoCategoria, Tipo, Privado, Feature", 'csv');
 
 //define field name passw as a password, hidding the file 
@@ -44,17 +44,18 @@ $table->setFieldsAtive("Nome, Email, PalavraPasse, FotoPerfil, Descricao, Codigo
 
 //define lists of values to supplay to a field
 $table->setFieldList("CodigoCategoria",1,"SELECT `CodigoCategoria`, `Categoria` FROM `Categoria` ORDER BY Categoria",1);
-$table->setFieldList("Tipo",2,"1=>Admin,100=>Atleta",1);
+$table->setFieldList("CodigoDesporto",1,"SELECT `CodigoDesporto`, `Nome`, `Descrição`, `Foto` FROM `Desportos` ORDER BY Nome",1);
+$table->setFieldList("Privado",2,"1=>Público,2=>Privado",1);
 
 //the fiekd to be present as an image
-//$table->setImageField("photo","../fotos/thumbs/",30);
+$table->setImageField("FotoPerfil","",60);
 
 //Link each record on the listo to external page passing the key value
 //$table->setLinkPage("/public/perfil.php");
 
 //Labels for fields
 $table->setLabel('CodigoDesporto',"desporto");
-//$table->setLabel('name',"Full Name");
+$table->setLabel('Privado',"Privacidade");
 //$table->setLabel('passw',"Password");
 
 //defines a criterion for the viewing action, where criterion is an sql (where) criterion that equals fields with values
